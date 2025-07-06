@@ -27,7 +27,7 @@ export const syncUser = asyncHandler(async(req,res)=>{
     
     const clekrUser = await clerkClient.users.getUser(userId);
 
-     const userData = {
+    const userData = {
     clerkId: userId,
     email: clekrUser.emailAddresses[0].emailAddress,
     firstName: clekrUser.firstName || "",

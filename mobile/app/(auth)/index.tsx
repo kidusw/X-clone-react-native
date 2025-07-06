@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
-import useSocialAuth from "../hooks/useSocialAuth";
+import useSocialAuth from "../../hooks/useSocialAuth";
 
 export default function Index() {
   const { isLoading, handleSocialAuth } = useSocialAuth();

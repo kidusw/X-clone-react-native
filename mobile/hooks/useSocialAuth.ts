@@ -13,9 +13,7 @@ const useSocialAuth = () => {
     setIsLoading(true);
     try {
       const { createdSessionId, setActive } = await startSSOFlow({ strategy });
-       setTimeout(()=>{
-          
-        },2000)
+   
       if (createdSessionId && setActive) {
         await setActive({ session: createdSessionId });
        
