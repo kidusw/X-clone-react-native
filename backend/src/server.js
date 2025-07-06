@@ -24,10 +24,10 @@ app.get('/',(req,res)=>{
 app.use('/api/users',userRoutes);
 app.use('/api/posts',postRoutes);
 app.use('/api/comments',commentRoutes);
-app.use('/api/notificaions',notificationRoutes);
+app.use('/api/notifications',notificationRoutes);
 
 // error handling middleware
-app.use((err,req,res)=>{
+app.use((err,req,res,next)=>{
     console.error("unhandled error:",err);
     res.status(500).json({error:err.message || "internal server error"});
 })
